@@ -3,8 +3,6 @@
     color: white;
     text-align: center;
     padding: 10px;
-    flex-basis: 50%;
     width: 100%;
-    position:absolute;
-    bottom: 0px;
+    margin-top: auto;
 }
