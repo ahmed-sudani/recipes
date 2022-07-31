@@ -11,7 +11,7 @@ export default function Nav() {
 
       <input className={styles.checkInput} type="checkbox" id="side-menu" />
 
-      <label className={styles.checkBtn} for="side-menu">
+      <label className={styles.checkBtn} htmlFor="side-menu">
         <ListIcon size={20} />
       </label>
 
