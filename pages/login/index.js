@@ -1,6 +1,6 @@
-import styles from "./styles.module.css";
-import Button from "../../components/Button";
-import Head from "../../components/Head";
+import Button from '../../components/button'
+import Head from '../../components/head'
+import styles from './styles.module.css'
 export default function Login() {
   return (
     <>
@@ -14,5 +14,5 @@ export default function Login() {
         <Button text="Send Link" />
       </form>
     </>
-  );
+  )
 }
