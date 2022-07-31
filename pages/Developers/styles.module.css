@@ -1,7 +1,0 @@
-.developers{
-    display: flex;
-    justify-content: space-around;
-    margin: 3%;
-    flex-wrap: wrap;
-    gap: 50px;
-}

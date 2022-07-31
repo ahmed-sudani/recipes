@@ -1,4 +1,4 @@
-import NextHead from "next/head";
+import NextHead from 'next/head'
 
 export default function Head(props) {
   return (
@@ -7,5 +7,5 @@ export default function Head(props) {
       <meta name="description" content={props.description} />
       <link rel="icon" href="/favicon.ico" />
     </NextHead>
-  );
+  )
 }

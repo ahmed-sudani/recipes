@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400&family=Sue+Ellen+Francisco&display=swap');
 html,
-body, #__next{
+body,
+#__next {
   width: 100%;
   height: 100%;
   display: flex;
@@ -11,7 +12,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
 }
 
 * {
@@ -19,14 +20,15 @@ body {
   padding: 0px;
   margin: 0px;
 }
-:root{
-  --gray :#D9D9D9;
-  --blue : #7795FF;
-  --green :#ABE0CD;
-  --bg : #ffffff;
+:root {
+  --gray: #d9d9d9;
+  --blue: #7795ff;
+  --green: #abe0cd;
+  --bg: #ffffff;
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 
-input, button{
+input,
+button {
   outline: 0px;
 }

@@ -1,8 +1,8 @@
-import Person from "../../components/Person";
-import styles from "./styles.module.css";
-export default function developers() {
+import Person from '../../components/person'
+import styles from './styles.module.css'
+export default function Developers() {
   return (
-    <div className={styles.developers}>
+    <div className={styles.container}>
       <Person
         img="mosab.png"
         name="Musab Kamil"
@@ -13,12 +13,12 @@ export default function developers() {
       ></Person>
       <Person
         img="ahmed.png"
-        name="Musab Kamil"
-        jobTitle="Front-End Developer"
+        name="Ahmed Abdalla"
+        jobTitle="Software Developer"
         description="Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
                   Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in,
                   elementum id enim."
       ></Person>
     </div>
-  );
+  )
 }

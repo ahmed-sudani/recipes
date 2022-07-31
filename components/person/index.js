@@ -1,5 +1,5 @@
-import styles from "./styles.module.css";
-import { Github, Linkedin } from "react-bootstrap-icons";
+import styles from './styles.module.css'
+import { Github, Linkedin } from 'react-bootstrap-icons'
 
 export default function Person(props) {
   return (
@@ -17,5 +17,5 @@ export default function Person(props) {
         </a>
       </div>
     </div>
-  );
+  )
 }

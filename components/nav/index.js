@@ -1,6 +1,6 @@
-import { List as ListIcon } from "react-bootstrap-icons";
-import Link from "../Link";
-import styles from "./styles.module.css";
+import { List as ListIcon } from 'react-bootstrap-icons'
+import Link from '../link'
+import styles from './styles.module.css'
 export default function Nav() {
   return (
     <header className={styles.header}>
@@ -23,5 +23,5 @@ export default function Nav() {
         <Link name="Login" icon="Person" />
       </nav>
     </header>
-  );
+  )
 }
