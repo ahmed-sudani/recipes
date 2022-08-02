@@ -4,7 +4,7 @@ export default function Favourites() {
   let cards = [
     {
       id: '2',
-      img: 'cster.png',
+      img: '/cster.png',
       time: '50 min',
       name: 'Chicken Vesuvio',
       contry: 'italian',
@@ -14,7 +14,7 @@ export default function Favourites() {
     },
     {
       id: '1',
-      img: 'cster.png',
+      img: '/cster.png',
       time: '50 min',
       name: 'Chicken Vesuvio',
       contry: 'italian',
