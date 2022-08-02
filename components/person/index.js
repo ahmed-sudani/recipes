@@ -1,10 +1,11 @@
 import styles from './styles.module.css'
 import { Github, Linkedin } from 'react-bootstrap-icons'
+import Image from 'next/image'
 
 export default function Person(props) {
   return (
     <div className={styles.Person}>
-      <img src={props.img} />
+      <Image width={200} height={200} alt={props.name} src={props.img} />
       <div> {props.name} </div>
       <div> {props.jobTitle} </div>
       <p> {props.description} </p>
