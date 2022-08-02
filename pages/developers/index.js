@@ -4,7 +4,7 @@ export default function Developers() {
   return (
     <div className={styles.container}>
       <Person
-        img="mosab.png"
+        img="/mosab.png"
         name="Musab Kamil"
         jobTitle="Front-End Developer"
         description="Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
@@ -12,7 +12,7 @@ export default function Developers() {
                   elementum id enim."
       ></Person>
       <Person
-        img="ahmed.png"
+        img="/ahmed.png"
         name="Ahmed Abdalla"
         jobTitle="Software Developer"
         description="Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
