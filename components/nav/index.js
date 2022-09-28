@@ -17,8 +17,8 @@ export default function Nav() {
 
       <nav className={styles.nav}>
         <Link name="Home" icon="House" />
-        <Link name="Reicpes" icon="EggFried" />
-        <Link name="Favourites" icon="Heart" />
+        <Link name="Recipes" icon="EggFried" />
+        <Link name="Favorites" icon="Heart" />
         <Link name="Developers" icon="CodeSlash" />
         <Link name="Login" icon="Person" />
       </nav>
