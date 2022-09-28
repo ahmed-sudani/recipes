@@ -1,5 +1,5 @@
 import Card from '../card'
-import styles from "./styles.module.css";
+import styles from './styles.module.css'
 export default function CardsList(props) {
   let cardsComp = props.cards.map((item) => (
     <Card
@@ -7,7 +7,7 @@ export default function CardsList(props) {
       img={item.img}
       time={item.time}
       name={item.name}
-      contry={item.contry}
+      country={item.country}
       description1={item.description1}
       description2={item.description2}
       description3={item.description3}

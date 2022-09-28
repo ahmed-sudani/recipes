@@ -11,7 +11,7 @@ export default function Card(props) {
       <div className={styles.cardBody}>
         <div className={styles.cardHead}>
           <h3 className={styles.name}> {props.name}</h3>
-          <div className={styles.contry}> {props.contry} </div>
+          <div className={styles.country}> {props.country} </div>
           <HeartFill size={16} className={styles.heart} />
         </div>
         <div className={styles.description}>
