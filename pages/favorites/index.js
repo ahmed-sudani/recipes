@@ -1,13 +1,14 @@
 import CardsList from '../../components/cardsList'
+import Head from '../../components/head'
 import styles from './styles.module.css'
-export default function Favourites() {
+export default function favorites() {
   let cards = [
     {
       id: '2',
       img: '/cster.png',
       time: '50 min',
       name: 'Chicken Vesuvio',
-      contry: 'italian',
+      country: 'italian',
       description1: '  1  dbjksdklca asdk ds',
       description2: '  2  ksldf nlks ask  ac',
       description3: '  3  dmfkwnd qwkdnmowqd ',
@@ -17,7 +18,7 @@ export default function Favourites() {
       img: '/cster.png',
       time: '50 min',
       name: 'Chicken Vesuvio',
-      contry: 'italian',
+      country: 'italian',
       description1: '  1  dbjksdklca asdk ds',
       description2: '  2  ksldf nlks ask  ac',
       description3: '  3  dmfkwnd qwkdnmowqd ',
@@ -25,8 +26,11 @@ export default function Favourites() {
   ]
 
   return (
-    <div className={styles.container}>
-      <CardsList cards={cards} />
-    </div>
+    <>
+      <Head title="Favorites" description="Your favorites recipes" />
+      <div className={styles.container}>
+        <CardsList cards={cards} />
+      </div>
+    </>
   )
 }
