@@ -1,0 +1,12 @@
+.link {
+  background-color: var(--gray);
+  padding: 5px 15px;
+  display: flex;
+  gap: 10px;
+  border-radius: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+.link:hover {
+  background-color: var(--green);
+}
