@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--bg);
+  padding: 5px 10px;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 20;
+}
+
+.icon {
+  background-color: none;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon > :first-child {
+  width: 35px;
+  height: 35px;
+  background-color: var(--gray);
+  border-radius: 50%;
+}
+
+.checkInput {
+  display: none;
+}
+
+.checkInput:checked ~ .nav {
+  display: flex;
+}
+
+.checkInput:checked ~ .checkBtn {
+  transform: rotateZ(-90deg);
+  transition: ease-in-out 0.2s;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-basis: 70%;
+  margin-left: auto;
+  background-color: var(--bg);
+}
+
+.nav > :last-child,
+.header > .checkBtn {
+  margin-left: auto;
+}
+
+.nav > :last-child {
+  margin-left: auto;
+}
+
+@media (max-width: 840px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    flex-basis: 100%;
+    margin-top: 10px;
+    border-top: 1px solid var(--gray);
+    padding: 10px 0px;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+    width: 100%;
+    box-shadow: var(--shadow);
+  }
+  .nav > :nth-child(n + 1) {
+    background-color: transparent;
+    margin: 0;
+    width: 100%;
+  }
+  .nav > :nth-child(n + 1):hover {
+    text-decoration: underline;
+    background-color: transparent;
+    border-left: 2px solid var(--green);
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 840px) {
+  .header > .checkBtn {
+    display: none;
+  }
+}
