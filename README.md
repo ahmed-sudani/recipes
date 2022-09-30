@@ -36,7 +36,7 @@ npm run start
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ahmed-sudani/recipes/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ahmed-sudani/recipes/issues).
 
 ## Show your support
 

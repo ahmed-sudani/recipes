@@ -13,5 +13,9 @@ export default function CardsList(props) {
       description3={item.description3}
     />
   ))
-  return <div className={styles.container} data-testid="container">{cardsComp}</div>
+  return (
+    <div className={styles.container} data-testid="container">
+      {cardsComp}
+    </div>
+  )
 }
