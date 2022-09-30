@@ -23,12 +23,12 @@ describe('Cards list', () => {
   it('should render CardList component', () => {
     render(<CardsList cards={[]} />)
     const cardListElement = screen.getByTestId('container')
-    expect(cardListElement).toBeDefined()
+    expect(cardListElement).toMatchSnapshot()
   })
   it('should have 2 cards in the list', () => {
     render(<CardsList cards={cards} />)
     const cardListElement = screen.getByTestId('container')
     const cardsList = within(cardListElement).getAllByTestId('card')
-    expect(cards.length).toEqual(2)
+    expect(cardsList.length).toEqual(2)
   })
 })
