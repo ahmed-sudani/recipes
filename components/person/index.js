@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Person(props) {
   return (
-    <div className={styles.Person}>
+    <div className={styles.Person} data-testid="person">
       <Image width={200} height={200} alt={props.name} src={props.img} />
       <div> {props.name} </div>
       <div> {props.jobTitle} </div>
