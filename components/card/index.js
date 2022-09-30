@@ -3,7 +3,7 @@ import { Clock, HeartFill } from 'react-bootstrap-icons'
 import styles from './styles.module.css'
 export default function Card(props) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-testid="card">
       <Image src={props.img} height={150} width={300} alt={props.name} />
       <span className={styles.time}>
         <Clock /> {props.time}
