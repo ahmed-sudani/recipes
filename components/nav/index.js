@@ -3,7 +3,7 @@ import Link from '../link'
 import styles from './styles.module.css'
 export default function Nav() {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-testid="header">
       <div className={styles.icon}>
         <div></div>
         <div>Intouch Recipes</div>
