@@ -10,6 +10,7 @@ export const authOptions = {
       from: process.env.EMAIL_FROM,
     }),
   ],
+  secret: process.env.NEXT_AUTH_SECRET,
   adapter: MongoDBAdapter(clientPromise),
   session: {
     jwt: true,
