@@ -28,6 +28,10 @@
 npm install
 ```
 
+## Configuration
+
+See .env.example for required parameters
+
 ## Usage
 
 ```sh
