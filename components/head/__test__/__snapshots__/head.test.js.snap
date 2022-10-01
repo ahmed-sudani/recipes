@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Head should render correctly 1`] = `
+<div
+  data-testid="head"
+>
+  <title
+    data-testid="test"
+  >
+    test
+  </title>
+  <meta
+    content="this is test"
+    data-testid="this is test"
+    name="description"
+  />
+  <link
+    href="/favicon.ico"
+    rel="icon"
+  />
+</div>
+`;

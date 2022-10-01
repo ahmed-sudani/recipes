@@ -4,7 +4,7 @@ import * as Icons from 'react-bootstrap-icons'
 export default function Link(props) {
   const Icon = Icons[props.icon]
   return (
-    <NextLink href={props.name.toLowerCase()}>
+    <NextLink href={`/${props.name.toLowerCase()}`}>
       <div className={styles.link}>
         <Icon size={20} />
         <div>{props.name}</div>
