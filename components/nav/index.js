@@ -1,5 +1,6 @@
 import { List as ListIcon } from 'react-bootstrap-icons'
 import Link from '../link'
+import LoginButton from '../loginButton'
 import styles from './styles.module.css'
 export default function Nav() {
   return (
@@ -20,7 +21,7 @@ export default function Nav() {
         <Link name="Recipes" icon="EggFried" />
         <Link name="Favorites" icon="Heart" />
         <Link name="Developers" icon="CodeSlash" />
-        <Link name="Login" icon="Person" />
+        <LoginButton />
       </nav>
     </header>
   )
