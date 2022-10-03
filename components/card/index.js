@@ -21,9 +21,10 @@ export default function Card(props) {
           <HeartFill size={16} className={styles.heart} />
         </div>
         <div className={styles.description}>
-          {props.ingredients.map((item, index) => (
-            <div key={index}>{item} </div>
-          ))}
+          {props.ingredients &&
+            props.ingredients.map((item, index) => (
+              <div key={index}>{item} </div>
+            ))}
         </div>
       </div>
     </div>
