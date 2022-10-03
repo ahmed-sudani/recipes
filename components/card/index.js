@@ -4,9 +4,15 @@ import styles from './styles.module.css'
 export default function Card(props) {
   return (
     <div className={styles.card} data-testid="card">
-      <Image src={props.img} height={150} width={300} alt={props.name} />
+      <Image
+        src={`https://res.cloudinary.com/demo/image/fetch/${props.image}`}
+        height={150}
+        width={300}
+        alt={props.name}
+        objectFit="cover"
+      />
       <span className={styles.time}>
-        <Clock /> {props.time}
+        <Clock /> {`${props.time} min`}
       </span>
       <div className={styles.cardBody}>
         <div className={styles.cardHead}>
@@ -15,9 +21,9 @@ export default function Card(props) {
           <HeartFill size={16} className={styles.heart} />
         </div>
         <div className={styles.description}>
-          <div>{props.description1} </div>
-          <div>{props.description2} </div>
-          <div>{props.description3} </div>
+          {props.ingredients.map((item, index) => (
+            <div key={index}>{item} </div>
+          ))}
         </div>
       </div>
     </div>
