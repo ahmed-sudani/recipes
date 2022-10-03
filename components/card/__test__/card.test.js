@@ -4,8 +4,9 @@ import Card from '..'
 const card = {
   name: 'chechen',
   time: '50:00',
-  img: '/cster.png',
+  image: '/cster.png',
   country: 'italy',
+  ingredients: [],
 }
 describe('Card', () => {
   it('should render card component', () => {
