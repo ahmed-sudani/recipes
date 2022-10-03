@@ -19,6 +19,7 @@ export default function Nav() {
       <nav className={styles.nav}>
         <Link name="Home" icon="House" />
         <Link name="Recipes" icon="EggFried" />
+        <Link name="New" icon="PlusCircle" />
         <Link name="Favorites" icon="Heart" />
         <Link name="Developers" icon="CodeSlash" />
         <LoginButton />
