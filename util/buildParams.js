@@ -1,4 +1,4 @@
-export function buildParams(data) {
+export default function buildParams(data) {
   var urlencoded = new URLSearchParams()
   Object.keys(data).map((key) => {
     {
