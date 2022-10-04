@@ -1,0 +1,69 @@
+.Text {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+.column {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  flex-basis: 350px;
+}
+
+.list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  flex-basis: 350px;
+}
+.list li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+.image {
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ingredientsInput {
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.ingredientsInput input {
+  background-color: #d9d9d9;
+  border: none;
+  width: 100%;
+}
+
+.ingredientsInput button {
+  display: flex;
+  border: none;
+  background-color: inherit;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
