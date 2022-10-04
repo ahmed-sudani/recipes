@@ -8,7 +8,7 @@ export default function favorites({ recipes }) {
     <>
       <Head title="Favorites" description="Save your favorites recipes" />
       <div className={styles.container}>
-        <CardsList cards={recipes} />
+        <CardsList cards={recipes || []} />
       </div>
     </>
   )
@@ -16,9 +16,15 @@ export default function favorites({ recipes }) {
 
 export const getServerSideProps = async (context) => {
   const recipes = await axios.get(
-    `http://${context.req.headers.host}/api/recipes`
+    `http://${context.req.headers.host}/api/favorites`,
+    {
+      withCredentials: true,
+      headers: {
+        Cookie: context.req.headers.cookie,
+      },
+    }
   )
   return {
-    props: { recipes: recipes.data },
+    props: { recipes: recipes.data.length ? recipes.data : [] },
   }
 }
