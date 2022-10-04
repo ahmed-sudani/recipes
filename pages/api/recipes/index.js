@@ -11,12 +11,11 @@ const secret = process.env.NEXT_AUTH_SECRET
 const schema = Joi.object().keys({
   name: Joi.string().min(5).max(50).required(),
   image: Joi.string().uri().max(100).required(),
-  country: Joi.string().min(5).max(50).required(),
+  country: Joi.string().min(2).max(50).required(),
   time: Joi.number().max(180).required(),
   ingredients: Joi.alternatives()
     .try(Joi.array().items(Joi.string()), Joi.string().min(5).max(100))
     .required(),
-  creator: Joi.string().required(),
 })
 
 const handler = nc({
@@ -66,6 +65,10 @@ const handler = nc({
     try {
       await connectMongo()
       const newRecipe = await Recipe.create({ ...req.body, creator: req.user })
+      const query = { user: req.user },
+        update = { $push: { recipes: newRecipe._id } },
+        options = { upsert: true, new: true, setDefaultsOnInsert: true }
+      await Favorites.findOneAndUpdate(query, update, options)
       res.status(201).json(newRecipe)
     } catch (error) {
       res.json({ error })
