@@ -8,7 +8,7 @@ export default function recipes({ recipes }) {
     <>
       <Head title="Recipes" description="Find you best recipes ever" />
       <div className={styles.container}>
-        <CardsList cards={recipes} />
+        <CardsList cards={recipes || []} />
       </div>
     </>
   )
@@ -16,9 +16,15 @@ export default function recipes({ recipes }) {
 
 export const getServerSideProps = async (context) => {
   const recipes = await axios.get(
-    `http://${context.req.headers.host}/api/recipes`
+    `http://${context.req.headers.host}/api/recipes`,
+    {
+      withCredentials: true,
+      headers: {
+        Cookie: context.req.headers.cookie,
+      },
+    }
   )
   return {
-    props: { recipes: recipes.data },
+    props: { recipes: recipes.data.length ? recipes.data : [] },
   }
 }
