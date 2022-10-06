@@ -135,18 +135,8 @@ export default function AddRecipe() {
             type="number"
             onBlur={updateInput(setTime)}
           />
-
-          <div className={styles.inputForm}>
-            <label>Ingredients</label>
-            <div className={styles.ingredientsInput}>
-              <input type="text" ref={ingredientsInputRef} />
-              <button type="button" onClick={addIngredients}>
-                <PlusSquare size={30} />
-              </button>
-            </div>
-          </div>
-
-          <Button text="Create Recipe" type="submit" />
+          <IngredientsInput {...{ ingredients, setIngredients }} />
+          <Button name="Create Recipe" type="submit" />
         </form>
         <FormIngredients {...{ ingredients, setIngredients }} />
       </div>
