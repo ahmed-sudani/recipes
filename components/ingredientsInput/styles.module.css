@@ -1,0 +1,25 @@
+.ingredientsInput {
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.ingredientsInput input {
+  background-color: #d9d9d9;
+  border: none;
+  width: 100%;
+}
+
+.ingredientsInput button {
+  display: flex;
+  border: none;
+  background-color: inherit;
+}
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,26 +1,28 @@
-import Image from 'next/image'
-import { Clock, HeartFill, Heart } from 'react-bootstrap-icons'
+import { useRouter } from 'next/router'
+import CarHeader from '../cardHeader'
+import ImageWithTime from '../ImageWithTime'
 import styles from './styles.module.css'
 export default function Card(props) {
+  const router = useRouter()
   return (
     <div className={styles.card} data-testid="card">
-      <Image
-        src={`https://res.cloudinary.com/demo/image/fetch/${props.image}`}
-        height={150}
+      <ImageWithTime
         width={300}
+        height={150}
+        image={props.image}
         alt={props.name}
-        objectFit="cover"
+        time={props.time}
+        onClickOnImage={() => router.push(`/recipes/${props._id}`)}
       />
-      <span className={styles.time}>
-        <Clock /> {`${props.time} min`}
-      </span>
+
       <div className={styles.cardBody}>
-        <div className={styles.cardHead}>
-          <h3 className={styles.name}> {props.name}</h3>
-          <div className={styles.country}> {props.country} </div>
-          {props.favorite && <HeartFill size={16} className={styles.heart} />}
-          {!props.favorite && <Heart size={16} className={styles.heart} />}
-        </div>
+        <CarHeader
+          isFavorite={props.favorite}
+          name={props.name}
+          country={props.country}
+          rid={props._id}
+        />
+
         <div className={styles.description}>
           {props.ingredients &&
             props.ingredients.map((item, index) => (

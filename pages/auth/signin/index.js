@@ -28,7 +28,7 @@ export default function Signin({ csrfToken }) {
             className={styles.input}
           />
         </div>
-        <Button text="Send Link" />
+        <Button name="Send Link" />
       </form>
     </>
   )

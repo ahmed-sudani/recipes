@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   width: 300px;
+  cursor: pointer;
 }
 
 .image {
   position: relative;
 }
-
 .time {
   position: absolute;
   top: 10px;
@@ -20,13 +20,11 @@
   align-items: center;
   gap: 6px;
 }
-
 .cardHead {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-
 .cardBody {
   display: flex;
   flex-direction: column;
@@ -45,7 +43,6 @@
 .name {
   font-weight: bold;
 }
-
 .country {
   background-color: #abe0cd;
   padding: 5px 10px;

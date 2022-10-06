@@ -6,6 +6,7 @@ exports[`Link should render correctly 1`] = `
 >
   <div
     class="link"
+    data-cy="test"
   >
     <svg
       fill="currentColor"

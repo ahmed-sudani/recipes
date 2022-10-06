@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  flex-basis: 350px;
+}
+.list li p:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}

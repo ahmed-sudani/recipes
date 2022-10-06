@@ -40,6 +40,7 @@ exports[`Nav should render nav component correctly 1`] = `
   >
     <div
       class="link"
+      data-cy="home"
     >
       <svg
         fill="currentColor"
@@ -63,6 +64,7 @@ exports[`Nav should render nav component correctly 1`] = `
     </div>
     <div
       class="link"
+      data-cy="recipes"
     >
       <svg
         fill="currentColor"
@@ -84,6 +86,7 @@ exports[`Nav should render nav component correctly 1`] = `
     </div>
     <div
       class="link"
+      data-cy="new"
     >
       <svg
         fill="currentColor"
@@ -105,6 +108,7 @@ exports[`Nav should render nav component correctly 1`] = `
     </div>
     <div
       class="link"
+      data-cy="favorites"
     >
       <svg
         fill="currentColor"
@@ -123,6 +127,7 @@ exports[`Nav should render nav component correctly 1`] = `
     </div>
     <div
       class="link"
+      data-cy="developers"
     >
       <svg
         fill="currentColor"

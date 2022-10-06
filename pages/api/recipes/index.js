@@ -14,7 +14,10 @@ const schema = Joi.object().keys({
   country: Joi.string().min(2).max(50).required(),
   time: Joi.number().max(180).required(),
   ingredients: Joi.alternatives()
-    .try(Joi.array().items(Joi.string()), Joi.string().min(5).max(100))
+    .try(
+      Joi.array().items(Joi.string().required()),
+      Joi.string().min(5).max(100).required()
+    )
     .required(),
 })
 
@@ -43,13 +46,18 @@ const handler = nc({
 
       const recipesIds = recipes.map((item) => item.id)
 
-      let { recipes: favoritesIds } = await Favorites.findOne({
+      let favoritesIds = await Favorites.findOne({
         user: token.sub,
         recipes: { $in: recipesIds },
       })
 
+      if (!favoritesIds) {
+        recipes = recipes.map((item) => ({ ...item._doc, favorite: false }))
+        return res.status(200).json(recipes)
+      }
+
       const favoritesIdSet = new Set(
-        favoritesIds.map((item) => item.toString())
+        favoritesIds.recipes.map((item) => item.toString())
       )
 
       const recipesWithFav = recipes.map((item) => {
