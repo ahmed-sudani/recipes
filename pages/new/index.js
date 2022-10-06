@@ -112,14 +112,13 @@ export default function AddRecipe() {
             name="Name"
             minLength={5}
             maxLength={50}
-            type="text"
-            onBlur={updateInput(setName)}
+            innerref={nameInputRef}
           />
           <InputWithLabel
             name="Image Url"
             type="url"
             maxLength={100}
-            onBlur={updateImageInput(setImage)}
+            onBlur={updateImageInput}
           />
           <CountrySelector text="Country" innerref={countryInputRef} />
           <InputWithLabel
@@ -127,7 +126,7 @@ export default function AddRecipe() {
             min={1}
             max={180}
             type="number"
-            onBlur={updateInput(setTime)}
+            innerref={timeInputRef}
           />
           <IngredientsInput {...{ ingredients, setIngredients }} />
           <Button name="Create Recipe" type="submit" />
