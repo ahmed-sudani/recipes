@@ -86,6 +86,10 @@ export default function AddRecipe() {
     try {
       await axios.post('/api/recipes', recipe, axiosConfig)
       router.push('/recipes')
+    } catch (error) {
+      if (error instanceof AxiosError)
+        return setError(error.response.data.message)
+      setError('something went wrong please try again later')
     }
   }
 
