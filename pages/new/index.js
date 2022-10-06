@@ -1,21 +1,24 @@
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
-import { EggFried, PlusSquare } from 'react-bootstrap-icons'
+import { EggFried } from 'react-bootstrap-icons'
 import Button from '../../components/button'
+import CountrySelector from '../../components/countrySelector'
+import FormIngredients from '../../components/formIngredients'
 import Head from '../../components/head'
+import IngredientsInput from '../../components/ingredientsInput'
 import InputWithLabel from '../../components/InputWithLabel'
 import styles from './styles.module.css'
-import { useRouter } from 'next/router'
 
 export default function AddRecipe() {
   const router = useRouter()
-  const [name, setName] = useState('')
+  const nameInputRef = useRef()
+  const timeInputRef = useRef()
+  const countryInputRef = useRef()
   const [image, setImage] = useState('')
-  const [country, setCountry] = useState('')
-  const [time, setTime] = useState('')
+  const [error, setError] = useState()
   const [ingredients, setIngredients] = useState([])
-  const ingredientsInputRef = useRef()
 
   const axiosConfig = {
     withCredentials: true,
@@ -36,18 +39,17 @@ export default function AddRecipe() {
 
       setImage(e.target.value)
     } catch (error) {
-        setImage('')
-      }
+      onImageError()
     }
   }
 
-  const ImageOnError = (e) => {
+  const onImageError = (e) => {
     setImage('')
+    setError('please enter a valid url')
   }
-  const ImageOrIcon = () => {
-    return (
-      <div className={styles.image}>
-        {image && (
+
+  const CustomImage = () => (
+    <div className={styles.image}>
       <Image
         src={`https://res.cloudinary.com/demo/image/fetch/${image}`}
         height={300}
