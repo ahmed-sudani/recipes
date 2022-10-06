@@ -98,16 +98,11 @@ export default function AddRecipe() {
       <div className={styles.container}>
         <ImageOrIcon />
 
-        <form
-          className={styles.column}
-          action="/api/recipes"
-          method="POST"
-          onSubmit={(e) => {
-            e.preventDefault()
-            sendApiRequest()
-          }}
-        >
-          <div className={styles.Text}>Add new recipe to the site</div>
+        <form className={styles.form} onSubmit={submitForm}>
+          <div className={styles.text}>Add new recipe to the site</div>
+
+          {error && <div className={styles.error}>{error}</div>}
+
           <InputWithLabel
             name="Name"
             minLength={5}
