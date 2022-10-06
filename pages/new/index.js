@@ -56,10 +56,11 @@ export default function AddRecipe() {
         onError={onImageError}
         objectFit="cover"
       />
-        )}
-        {!image && <EggFried size={200} />}
-      </div>
-    )
+    </div>
+  )
+
+  const ImageOrIcon = () => {
+    return image ? <CustomImage /> : <EggFried size={300} />
   }
 
   const sendApiRequest = async () => {
