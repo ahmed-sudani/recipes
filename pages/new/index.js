@@ -148,10 +148,7 @@ export default function AddRecipe() {
 
           <Button text="Create Recipe" type="submit" />
         </form>
-
-        <ul className={styles.list}>
-          <IngredientsList />
-        </ul>
+        <FormIngredients {...{ ingredients, setIngredients }} />
       </div>
     </>
   )
