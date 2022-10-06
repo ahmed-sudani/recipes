@@ -60,14 +60,14 @@ export default function AddRecipe() {
     return (
       <div className={styles.image}>
         {image && (
-          <Image
-            src={`https://res.cloudinary.com/demo/image/fetch/${image}`}
-            height={300}
-            width={300}
-            alt={image}
-            onError={ImageOnError}
-            objectFit="cover"
-          />
+      <Image
+        src={`https://res.cloudinary.com/demo/image/fetch/${image}`}
+        height={300}
+        width={300}
+        alt={image}
+        onError={onImageError}
+        objectFit="cover"
+      />
         )}
         {!image && <EggFried size={200} />}
       </div>
