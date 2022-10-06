@@ -14,7 +14,10 @@ const schema = Joi.object().keys({
   country: Joi.string().min(2).max(50).required(),
   time: Joi.number().max(180).required(),
   ingredients: Joi.alternatives()
-    .try(Joi.array().items(Joi.string()), Joi.string().min(5).max(100))
+    .try(
+      Joi.array().items(Joi.string().required()),
+      Joi.string().min(5).max(100).required()
+    )
     .required(),
 })
 
