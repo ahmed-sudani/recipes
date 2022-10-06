@@ -75,18 +75,16 @@ export default function AddRecipe() {
   }
 
   const sendApiRequest = async () => {
-    let res = await axios.post(
-      '/api/recipes',
-      {
-        name,
-        country,
-        time,
-        image,
-        ingredients,
-      },
-      { withCredentials: true }
-    )
-    if (res.status == 201) {
+    const recipe = {
+      name: nameInputRef.current.value,
+      country: countryInputRef.current.state.selectValue[0].label,
+      time: timeInputRef.current.value,
+      image: image,
+      ingredients: ingredients,
+    }
+
+    try {
+      await axios.post('/api/recipes', recipe, axiosConfig)
       router.push('/recipes')
     }
   }
