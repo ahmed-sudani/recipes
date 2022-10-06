@@ -1,9 +1,13 @@
 .card {
-  position: relative;
   display: flex;
   flex-direction: column;
   width: 300px;
 }
+
+.image {
+  position: relative;
+}
+
 .time {
   position: absolute;
   top: 10px;
@@ -16,11 +20,13 @@
   align-items: center;
   gap: 6px;
 }
+
 .cardHead {
   display: flex;
   gap: 15px;
   align-items: center;
 }
+
 .cardBody {
   display: flex;
   flex-direction: column;
@@ -30,13 +36,16 @@
   border-radius: 0px 0px 5px 5px;
   box-shadow: var(--shadow);
 }
+
 .heart {
   color: #ff7777;
   margin-left: auto;
 }
+
 .name {
   font-weight: bold;
 }
+
 .country {
   background-color: #abe0cd;
   padding: 5px 10px;
