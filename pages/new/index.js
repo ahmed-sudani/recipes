@@ -91,6 +91,11 @@ export default function AddRecipe() {
     }
   }
 
+  const submitForm = (e) => {
+    e.preventDefault()
+    sendApiRequest()
+  }
+
   return (
     <>
       <Head title="Create New Recipe" description="create new recipe" />
