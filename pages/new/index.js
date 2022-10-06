@@ -121,13 +121,7 @@ export default function AddRecipe() {
             maxLength={100}
             onBlur={updateImageInput(setImage)}
           />
-          <InputWithLabel
-            name="Country"
-            minLength={2}
-            maxLength={50}
-            type="text"
-            onBlur={updateInput(setCountry)}
-          />
+          <CountrySelector text="Country" innerref={countryInputRef} />
           <InputWithLabel
             name="Required Time"
             min={1}
