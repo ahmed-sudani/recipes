@@ -17,10 +17,8 @@ export default function AddRecipe() {
   const [ingredients, setIngredients] = useState([])
   const ingredientsInputRef = useRef()
 
-  const addIngredients = () => {
-    if (ingredientsInputRef.current.value)
-      setIngredients([...ingredients, ingredientsInputRef.current.value])
-    ingredientsInputRef.current.value = ''
+  const axiosConfig = {
+    withCredentials: true,
   }
   const IngredientsList = () => {
     return ingredients.map((ingredient, index) => (
