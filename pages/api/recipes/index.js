@@ -46,7 +46,7 @@ const handler = nc({
 
       const recipesIds = recipes.map((item) => item.id)
 
-      let { recipes: favoritesIds } = await Favorites.findOne({
+      let favoritesIds = await Favorites.findOne({
         user: token.sub,
         recipes: { $in: recipesIds },
       })
@@ -57,7 +57,7 @@ const handler = nc({
       }
 
       const favoritesIdSet = new Set(
-        favoritesIds.map((item) => item.toString())
+        favoritesIds.recipes.map((item) => item.toString())
       )
 
       const recipesWithFav = recipes.map((item) => {
