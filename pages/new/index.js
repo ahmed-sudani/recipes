@@ -20,32 +20,22 @@ export default function AddRecipe() {
   const axiosConfig = {
     withCredentials: true,
   }
-  const IngredientsList = () => {
-    return ingredients.map((ingredient, index) => (
-      <li
-        onClick={() => {
-          setIngredients((prev) => prev.filter((value) => value != ingredient))
-        }}
-        key={index}
-      >
-        {ingredient}
-      </li>
-    ))
-  }
 
-  const updateInput = (setValue) => {
-    return (e) => {
-      setValue(e.target.value)
-    }
-  }
+  const updateImageInput = (e) => {
+    try {
+      setError('')
+      setImage('')
 
-  const updateImageInput = (setValue) => {
-    return (e) => {
-      try {
-        if (new URL(e.target.value).protocol === 'https:') {
-          setValue(e.target.value)
-        }
-      } catch (error) {
+      if (!e.target.value) {
+        return
+      }
+
+      if (new URL(e.target.value).protocol != 'https:') {
+        throw Error()
+      }
+
+      setImage(e.target.value)
+    } catch (error) {
         setImage('')
       }
     }
