@@ -3,6 +3,7 @@
 exports[`Button should render button component 1`] = `
 <button
   class="btn"
+  name="test"
 >
   test
 </button>
