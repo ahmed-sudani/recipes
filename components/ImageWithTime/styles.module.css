@@ -1,0 +1,15 @@
+.image {
+  position: relative;
+}
+.time {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff7777;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
