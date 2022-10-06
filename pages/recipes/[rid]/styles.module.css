@@ -1,0 +1,31 @@
+.container {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.infos,
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ingredients {
+  min-width: 300px;
+}
+
+.ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.infos button {
+  background-color: rgb(250, 103, 103);
+  margin-top: auto;
+}
+.vl {
+  border-left: 1px solid var(--gray);
+  height: 500px;
+}
