@@ -7,11 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "npm run test:server ; npm run test:client",
-    "dev:test:server": "jest ./__test__/api --env=node --watch",
-    "dev:test:client": "jest ./components --watch",
-    "test:server": "jest ./__test__/api --env=node ",
-    "test:client": "jest ./components",
+    "test": "jest",
+    "test:dev": "jest --watch",
     "prepare": "husky install"
   },
   "dependencies": {
