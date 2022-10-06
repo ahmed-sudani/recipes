@@ -51,6 +51,11 @@ const handler = nc({
         recipes: { $in: recipesIds },
       })
 
+      if (!favoritesIds) {
+        recipes = recipes.map((item) => ({ ...item._doc, favorite: false }))
+        return res.status(200).json(recipes)
+      }
+
       const favoritesIdSet = new Set(
         favoritesIds.map((item) => item.toString())
       )
