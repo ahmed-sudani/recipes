@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New page should render correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <svg
+      fill="currentColor"
+      height="300"
+      viewBox="0 0 16 16"
+      width="300"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+      />
+      <path
+        d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"
+      />
+    </svg>
+    <form
+      class="form"
+    >
+      <div
+        class="text"
+      >
+        Add new recipe to the site
+      </div>
+      <div
+        class="inputForm"
+      >
+        <label>
+           
+          Name
+           
+        </label>
+        <input
+          class="input"
+          innerref="[object Object]"
+          maxlength="50"
+          minlength="5"
+          name="Name"
+        />
+      </div>
+      <div
+        class="inputForm"
+      >
+        <label>
+           
+          Image Url
+           
+        </label>
+        <input
+          class="input"
+          maxlength="100"
+          name="Image Url"
+          type="url"
+        />
+      </div>
+      <div
+        class="inputForm"
+      >
+        <label>
+          Country
+        </label>
+        <div
+          class="input css-b62m3t-container"
+        >
+          <span
+            class="css-1f43avz-a11yText-A11yText"
+            id="react-select-2-live-region"
+          />
+          <span
+            aria-atomic="false"
+            aria-live="polite"
+            aria-relevant="additions text"
+            class="css-1f43avz-a11yText-A11yText"
+          />
+          <div
+            class=" css-1s2u09g-control"
+          >
+            <div
+              class=" css-319lph-ValueContainer"
+            >
+              <div
+                class=" css-14el2xx-placeholder"
+                id="react-select-2-placeholder"
+              >
+                Select...
+              </div>
+              <div
+                class=" css-6j8wv5-Input"
+                data-value=""
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-describedby="react-select-2-placeholder"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  autocapitalize="none"
+                  autocomplete="off"
+                  autocorrect="off"
+                  class=""
+                  id="react-select-2-input"
+                  role="combobox"
+                  spellcheck="false"
+                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                  tabindex="0"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class=" css-1hb7zxy-IndicatorsContainer"
+            >
+              <span
+                class=" css-1okebmr-indicatorSeparator"
+              />
+              <div
+                aria-hidden="true"
+                class=" css-tlfecz-indicatorContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="css-tj5bde-Svg"
+                  focusable="false"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <path
+                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <input
+            name="country"
+            type="hidden"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="inputForm"
+      >
+        <label>
+           
+          Required Time
+           
+        </label>
+        <input
+          class="input"
+          innerref="[object Object]"
+          max="180"
+          min="1"
+          name="Required Time"
+          type="number"
+        />
+      </div>
+      <div
+        class="inputForm"
+      >
+        <label>
+          Ingredients
+        </label>
+        <div
+          class="ingredientsInput"
+        >
+          <input
+            type="text"
+          />
+          <button
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="20"
+              viewBox="0 0 16 16"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+              />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button
+        class="btn"
+        name="Create Recipe"
+        type="submit"
+      >
+        Create Recipe
+      </button>
+    </form>
+    <ul
+      class="list"
+      data-testid="container"
+    />
+  </div>
+</div>
+`;
