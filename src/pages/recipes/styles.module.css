@@ -1,0 +1,27 @@
+.container {
+  margin: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.filter {
+  flex-basis: 300px;
+  min-width: 300px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
