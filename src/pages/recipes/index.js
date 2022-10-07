@@ -8,7 +8,7 @@ import Head from '../../common/components/head'
 import InputWithLabel from '../../common/components/InputWithLabel'
 import styles from './styles.module.css'
 
-export default function recipes({ recipes }) {
+export default function Recipes({ recipes }) {
   const router = useRouter()
   const nameInputRef = useRef()
   const timeInputRef = useRef()
