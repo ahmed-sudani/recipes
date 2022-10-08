@@ -1,7 +1,7 @@
-import DynamicImage from '../image'
+import { DynamicImage } from '../images'
 import styles from './styles.module.css'
 
-export default function ingredient(props) {
+export function Ingredient(props) {
   return (
     <li onClick={props.onClickOnItem} className={styles.li}>
       <div className={styles.image}>

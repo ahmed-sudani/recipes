@@ -3,12 +3,14 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
 import { EggFried } from 'react-bootstrap-icons'
-import Button from '../../common//components/button'
-import CountrySelector from '../../common//components/countrySelector'
-import FormIngredients from '../../common//components/formIngredients'
-import Head from '../../common//components/head'
-import IngredientsInput from '../../common//components/ingredientsInput'
-import InputWithLabel from '../../common//components/InputWithLabel'
+import {
+  Button,
+  CountrySelector,
+  FormIngredients,
+  Head,
+  IngredientsInput,
+  InputWithLabel,
+} from '../../common/components'
 import styles from './styles.module.css'
 
 export default function AddRecipe() {

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Head from '..'
+import { Head } from '..'
 
 jest.mock('next/head', () => {
   return {

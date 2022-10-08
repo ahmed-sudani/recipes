@@ -1,6 +1,6 @@
 import NextHead from 'next/head'
 
-export default function Head(props) {
+export function Head(props) {
   return (
     <NextHead>
       <title data-testid={props.title}>{props.title}</title>

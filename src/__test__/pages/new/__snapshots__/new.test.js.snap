@@ -41,6 +41,7 @@ exports[`New page should render correctly 1`] = `
           maxlength="50"
           minlength="5"
           name="Name"
+          required=""
         />
       </div>
       <div
@@ -55,6 +56,7 @@ exports[`New page should render correctly 1`] = `
           class="input"
           maxlength="100"
           name="Image Url"
+          required=""
           type="url"
         />
       </div>
@@ -158,6 +160,7 @@ exports[`New page should render correctly 1`] = `
           max="180"
           min="1"
           name="Required Time"
+          required=""
           type="number"
         />
       </div>

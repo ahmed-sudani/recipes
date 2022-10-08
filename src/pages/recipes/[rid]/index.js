@@ -1,9 +1,11 @@
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import Button from '../../../common/components/button'
-import CarHeader from '../../../common/components/cardHeader'
-import ImageWithTime from '../../../common/components/ImageWithTime'
-import IngredientsList from '../../../common/components/ingredientList'
+import {
+  Button,
+  ImageWithTime,
+  IngredientsList,
+  RecipeCarHeader,
+} from '../../../common/components/'
 import styles from './styles.module.css'
 
 export default function Recipe(props) {
@@ -18,7 +20,7 @@ export default function Recipe(props) {
     <>
       <div className={styles.container}>
         <div className={styles.infos}>
-          <CarHeader
+          <RecipeCarHeader
             name={props.recipe.name}
             country={props.recipe.country}
             isFavorite={props.isFavorite}
