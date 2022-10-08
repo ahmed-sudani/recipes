@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import Head from '../../../common/components/head'
+import { Head } from '../../../common/components'
 
 export default function verifyRequest({ host }) {
   return (

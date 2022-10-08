@@ -28,7 +28,7 @@ export const authOptions = {
     // The maximum age of the NextAuth.js issued JWT in seconds.
     // Defaults to `session.maxAge`.
     maxAge: 60 * 60 * 24 * 30,
-    // You can define your own encode/decode functions for signing and encryption
+    // You can define your own encode/decode default functions for signing and encryption
   },
 }
 export default NextAuth(authOptions)

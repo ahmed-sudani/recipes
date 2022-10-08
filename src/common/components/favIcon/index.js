@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Heart, HeartFill } from 'react-bootstrap-icons'
 import styles from './styles.module.css'
 
-export default function FavIcon({ isFavoriteInit, rid }) {
+export function FavIcon({ isFavoriteInit, rid }) {
   const [isFavorite, setIsFavorite] = useState(isFavoriteInit)
 
   const changeIsFavorite = async () => {

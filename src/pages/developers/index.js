@@ -1,5 +1,4 @@
-import Head from '../../common/components/head'
-import Person from '../../common/components/person'
+import { Head, Person } from '../../common/components'
 import styles from './styles.module.css'
 export default function Developers() {
   return (

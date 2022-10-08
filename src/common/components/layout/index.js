@@ -1,7 +1,6 @@
-import Footer from '../footer'
-import Nav from '../nav'
+import { Footer, Nav } from '../navigation'
 
-export default function Layout(props) {
+export function Layout(props) {
   return (
     <>
       <Nav />

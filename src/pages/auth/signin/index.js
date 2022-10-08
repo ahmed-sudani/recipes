@@ -1,6 +1,5 @@
 import { getCsrfToken } from 'next-auth/react'
-import Button from '../../../common/components/button'
-import Head from '../../../common/components/head'
+import { Button, Head } from '../../../common/components'
 import styles from './styles.module.css'
 export default function Signin({ csrfToken }) {
   return (

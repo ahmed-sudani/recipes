@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { useSession } from 'next-auth/react'
-import Layout from '..'
+import { Layout } from '..'
 
 jest.mock('next-auth/react')
 

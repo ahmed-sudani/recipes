@@ -1,11 +1,13 @@
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
-import Button from '../../common/components/button'
-import CardsList from '../../common/components/cardsList'
-import CountrySelector from '../../common/components/countrySelector'
-import Head from '../../common/components/head'
-import InputWithLabel from '../../common/components/InputWithLabel'
+import {
+  Head,
+  Button,
+  RecipesList,
+  CountrySelector,
+  InputWithLabel,
+} from '../../common/components'
 import styles from './styles.module.css'
 
 export default function Recipes({ recipes }) {
@@ -55,7 +57,7 @@ export default function Recipes({ recipes }) {
           <Button name="Search" onClick={onSubmitSearch} />
         </div>
 
-        <CardsList cards={recipes || []} />
+        <RecipesList cards={recipes || []} />
       </div>
     </>
   )
