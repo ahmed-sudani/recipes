@@ -15,7 +15,7 @@ const handler = nc({
   onNoMatch: (req, res) => {
     res.status(404).end('Page is not found')
   },
-}).get(auth, async (req, res) => {
+}).get(async (req, res) => {
   try {
     const { data } = await axios.get(
       `https://api.pexels.com/v1/search?query=${req.query.query}, &per_page=1`,
