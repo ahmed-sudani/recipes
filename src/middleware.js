@@ -7,6 +7,11 @@ const secret = process.env.NEXT_AUTH_SECRET
  */
 
 export async function middleware(req) {
+  if (req.nextUrl.pathname == '/') {
+    req.nextUrl.pathname = '/home'
+    return NextResponse.redirect(req.nextUrl)
+  }
+
   const token = await getToken({ req, secret })
   if (!token) {
     req.nextUrl.searchParams.set('callbackUrl', req.url)
@@ -17,5 +22,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ['/favorites', '/new'],
+  matcher: ['/favorites', '/new', '/'],
 }
