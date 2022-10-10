@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.text {
+  text-align: center;
+  padding: 10px;
+}
+.image {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+.item {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ingredients ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: circle;
+}
