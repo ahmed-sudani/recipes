@@ -6,6 +6,8 @@
   border-radius: 20px;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 .link:hover {
   background-color: var(--green);
