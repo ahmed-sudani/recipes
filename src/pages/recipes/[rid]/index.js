@@ -33,7 +33,9 @@ export default function Recipe(props) {
             time={props.recipe.time}
           />
 
-          {props.isCreator && <Button name="Delete" onClick={deleteRecipe} />}
+          {props.isCreator && (
+            <Button data-cy="delete" name="Delete" onClick={deleteRecipe} />
+          )}
         </div>
         <div className={styles.vl} />
         <div className={styles.ingredients}>

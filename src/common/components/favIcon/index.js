@@ -11,8 +11,18 @@ export function FavIcon({ isFavoriteInit, rid }) {
     setIsFavorite(!isFavorite)
   }
   return isFavorite ? (
-    <HeartFill size={16} className={styles.heart} onClick={changeIsFavorite} />
+    <HeartFill
+      data-cy="favIcon"
+      size={16}
+      className={styles.heart}
+      onClick={changeIsFavorite}
+    />
   ) : (
-    <Heart size={16} className={styles.heart} onClick={changeIsFavorite} />
+    <Heart
+      data-cy="favIcon"
+      size={16}
+      className={styles.heart}
+      onClick={changeIsFavorite}
+    />
   )
 }

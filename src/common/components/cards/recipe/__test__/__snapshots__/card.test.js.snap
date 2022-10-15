@@ -72,6 +72,7 @@ exports[`Card should render card component 1`] = `
       </div>
       <svg
         class="heart"
+        data-cy="favIcon"
         fill="currentColor"
         height="16"
         viewBox="0 0 16 16"

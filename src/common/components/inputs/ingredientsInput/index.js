@@ -15,7 +15,12 @@ export function IngredientsInput({ ingredients, setIngredients }) {
     <div className={styles.inputForm}>
       <label>Ingredients</label>
       <div className={styles.ingredientsInput}>
-        <input type="text" ref={ingredientsInputRef} />
+        <input
+          name="Ingredient"
+          type="text"
+          onKeyDown={(e) => (e.key === 'Enter' ? addIngredients() : '')}
+          ref={ingredientsInputRef}
+        />
         <button type="button" onClick={addIngredients}>
           <PlusSquare size={20} />
         </button>

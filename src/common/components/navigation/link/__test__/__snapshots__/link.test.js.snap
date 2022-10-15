@@ -4,7 +4,7 @@ exports[`Link should render correctly 1`] = `
 <div
   data-testid="link"
 >
-  <div
+  <a
     class="link"
     data-cy="test"
   >
@@ -22,6 +22,6 @@ exports[`Link should render correctly 1`] = `
     <div>
       test
     </div>
-  </div>
+  </a>
 </div>
 `;

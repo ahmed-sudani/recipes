@@ -1,4 +1,5 @@
 import axios, { AxiosError } from 'axios'
+import { ValidationError } from 'joi'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
@@ -11,6 +12,7 @@ import {
   IngredientsInput,
   InputWithLabel,
 } from '../../common/components'
+import { recipesSchema } from '../../common/schemas/recipes'
 import styles from './styles.module.css'
 
 export default function AddRecipe() {
@@ -70,25 +72,23 @@ export default function AddRecipe() {
   const sendApiRequest = async () => {
     const recipe = {
       name: nameInputRef.current.value,
-      country: countryInputRef.current.state.selectValue[0].label,
-      time: timeInputRef.current.value,
+      country: countryInputRef.current.state.selectValue[0]
+        ? countryInputRef.current.state.selectValue[0].label
+        : '',
+      time: timeInputRef.current.value | 0,
       image: image,
       ingredients: ingredients,
     }
-
     try {
+      await recipesSchema.validateAsync(recipe)
       await axios.post('/api/recipes', recipe, axiosConfig)
       router.push('/recipes')
     } catch (error) {
       if (error instanceof AxiosError)
         return setError(error.response.data.message)
+      if (error instanceof ValidationError) return setError(error.message)
       setError('something went wrong please try again later')
     }
-  }
-
-  const submitForm = (e) => {
-    e.preventDefault()
-    sendApiRequest()
   }
 
   return (
@@ -98,34 +98,22 @@ export default function AddRecipe() {
       <div className={styles.container}>
         <ImageOrIcon />
 
-        <form className={styles.form} onSubmit={submitForm}>
+        <div className={styles.form}>
           <div className={styles.text}>Add new recipe to the site</div>
 
           {error && <div className={styles.error}>{error}</div>}
 
-          <InputWithLabel
-            name="Name"
-            minLength={5}
-            maxLength={50}
-            innerref={nameInputRef}
-          />
-          <InputWithLabel
-            name="Image Url"
-            type="url"
-            maxLength={100}
-            onBlur={updateImageInput}
-          />
+          <InputWithLabel name="Name" innerref={nameInputRef} />
+          <InputWithLabel name="Image Url" onBlur={updateImageInput} />
           <CountrySelector text="Country" innerref={countryInputRef} />
           <InputWithLabel
             name="Required Time"
-            min={1}
-            max={180}
             type="number"
             innerref={timeInputRef}
           />
           <IngredientsInput {...{ ingredients, setIngredients }} />
-          <Button name="Create Recipe" type="submit" />
-        </form>
+          <Button onClick={sendApiRequest} name="Create Recipe" type="submit" />
+        </div>
         <FormIngredients {...{ ingredients, setIngredients }} />
       </div>
     </>
