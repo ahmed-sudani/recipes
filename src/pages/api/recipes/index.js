@@ -1,25 +1,12 @@
-import Joi from 'joi'
 import { getToken } from 'next-auth/jwt'
 import nc from 'next-connect'
+import { recipesSchema } from '../../../common/schemas/recipes'
+import connectMongo from '../../../common/util/connectMongo'
 import auth from '../../../lib/middleware/auth'
 import validate from '../../../lib/middleware/validation'
 import Favorites from '../../../models/favorite'
 import Recipe from '../../../models/recipes'
-import connectMongo from '../../../common/util/connectMongo'
 const secret = process.env.NEXT_AUTH_SECRET
-
-const schema = Joi.object().keys({
-  name: Joi.string().min(5).max(50).required(),
-  image: Joi.string().uri().max(100).required(),
-  country: Joi.string().min(2).max(50).required(),
-  time: Joi.number().max(180).required(),
-  ingredients: Joi.alternatives()
-    .try(
-      Joi.array().items(Joi.string().required()),
-      Joi.string().min(5).max(100).required()
-    )
-    .required(),
-})
 
 const handler = nc({
   onError: (err, req, res, next) => {
@@ -82,7 +69,7 @@ const handler = nc({
       res.json({ error })
     }
   })
-  .post(auth, validate({ body: schema }), async (req, res) => {
+  .post(auth, validate({ body: recipesSchema }), async (req, res) => {
     try {
       await connectMongo()
       const newRecipe = await Recipe.create({ ...req.body, creator: req.user })
