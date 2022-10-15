@@ -38,9 +38,10 @@ exports[`Nav should render nav component correctly 1`] = `
   <nav
     class="nav"
   >
-    <div
+    <a
       class="link"
       data-cy="home"
+      href="/home"
     >
       <svg
         fill="currentColor"
@@ -61,10 +62,11 @@ exports[`Nav should render nav component correctly 1`] = `
       <div>
         Home
       </div>
-    </div>
-    <div
+    </a>
+    <a
       class="link"
       data-cy="recipes"
+      href="/recipes"
     >
       <svg
         fill="currentColor"
@@ -83,10 +85,11 @@ exports[`Nav should render nav component correctly 1`] = `
       <div>
         Recipes
       </div>
-    </div>
-    <div
+    </a>
+    <a
       class="link"
       data-cy="new"
+      href="/new"
     >
       <svg
         fill="currentColor"
@@ -105,10 +108,11 @@ exports[`Nav should render nav component correctly 1`] = `
       <div>
         New
       </div>
-    </div>
-    <div
+    </a>
+    <a
       class="link"
       data-cy="favorites"
+      href="/favorites"
     >
       <svg
         fill="currentColor"
@@ -124,10 +128,11 @@ exports[`Nav should render nav component correctly 1`] = `
       <div>
         Favorites
       </div>
-    </div>
-    <div
+    </a>
+    <a
       class="link"
       data-cy="developers"
+      href="/developers"
     >
       <svg
         fill="currentColor"
@@ -143,7 +148,7 @@ exports[`Nav should render nav component correctly 1`] = `
       <div>
         Developers
       </div>
-    </div>
+    </a>
     <button
       class="signInBtn"
     >
