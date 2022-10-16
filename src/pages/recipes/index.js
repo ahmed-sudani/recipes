@@ -2,12 +2,12 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
 import {
-  Head,
   Button,
-  RecipesList,
   CountrySelector,
-  InputWithLabel,
+  Head,
+  RecipesList,
 } from '../../common/components'
+import { WithLabel } from '../../common/hoc/withLabel'
 import styles from './styles.module.css'
 
 export default function Recipes({ recipes }) {
@@ -33,26 +33,21 @@ export default function Recipes({ recipes }) {
       <Head title="Recipes" description="Find you best recipes ever" />
       <div className={styles.container}>
         <div className={styles.filter}>
-          <InputWithLabel
-            innerref={nameInputRef}
-            name="Query"
-            minLength={5}
-            maxLength={50}
-          />
+          <WithLabel label="Query">
+            <input innerref={nameInputRef} name="Query" />
+          </WithLabel>
 
           <hr />
 
-          <CountrySelector innerref={countryInputRef} text="Country" />
+          <WithLabel label="Country">
+            <CountrySelector innerref={countryInputRef} />
+          </WithLabel>
 
           <hr />
 
-          <InputWithLabel
-            innerref={timeInputRef}
-            name="Required Time"
-            min={1}
-            max={180}
-            type="number"
-          />
+          <WithLabel label="Required Time">
+            <input innerref={timeInputRef} name="Required Time" type="number" />
+          </WithLabel>
 
           <Button name="Search" onClick={onSubmitSearch} />
         </div>

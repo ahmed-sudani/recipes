@@ -7,11 +7,11 @@ import { EggFried } from 'react-bootstrap-icons'
 import {
   Button,
   CountrySelector,
-  FormIngredients,
   Head,
-  IngredientsInput,
-  InputWithLabel,
+  IngredientsList,
+  InputWithIcon,
 } from '../../common/components'
+import { WithLabel } from '../../common/hoc/withLabel'
 import { recipesSchema } from '../../common/schemas/recipes'
 import styles from './styles.module.css'
 
@@ -19,6 +19,7 @@ export default function AddRecipe() {
   const router = useRouter()
   const nameInputRef = useRef()
   const timeInputRef = useRef()
+  const ingredientsInputRef = useRef()
   const countryInputRef = useRef()
   const [image, setImage] = useState('')
   const [error, setError] = useState()
@@ -26,6 +27,18 @@ export default function AddRecipe() {
 
   const axiosConfig = {
     withCredentials: true,
+  }
+
+  const removeIngredient = (e) => {
+    setIngredients((prev) =>
+      prev.filter((value) => value != e.target.innerText)
+    )
+  }
+
+  const addIngredients = () => {
+    if (ingredientsInputRef.current.value)
+      setIngredients([...ingredients, ingredientsInputRef.current.value])
+    ingredientsInputRef.current.value = ''
   }
 
   const updateImageInput = (e) => {
@@ -103,18 +116,39 @@ export default function AddRecipe() {
 
           {error && <div className={styles.error}>{error}</div>}
 
-          <InputWithLabel name="Name" innerref={nameInputRef} />
-          <InputWithLabel name="Image Url" onBlur={updateImageInput} />
-          <CountrySelector text="Country" innerref={countryInputRef} />
-          <InputWithLabel
-            name="Required Time"
-            type="number"
-            innerref={timeInputRef}
-          />
-          <IngredientsInput {...{ ingredients, setIngredients }} />
+          <WithLabel label={'Name'}>
+            <input name="Name" ref={nameInputRef} />
+          </WithLabel>
+
+          <WithLabel label={'Image Url'}>
+            <input name="Image Url" onBlur={updateImageInput} />
+          </WithLabel>
+
+          <WithLabel label={'Country'}>
+            <CountrySelector innerref={countryInputRef} />
+          </WithLabel>
+
+          <WithLabel label={'Required Time'}>
+            <input name="Required Time" type="number" ref={timeInputRef} />
+          </WithLabel>
+
+          <WithLabel label={'Ingredients'}>
+            <InputWithIcon
+              icon="PlusSquare"
+              name="Ingredient"
+              innerref={ingredientsInputRef}
+              onKeyDown={(e) => (e.key === 'Enter' ? addIngredients() : '')}
+            />
+          </WithLabel>
+
           <Button onClick={sendApiRequest} name="Create Recipe" type="submit" />
         </div>
-        <FormIngredients {...{ ingredients, setIngredients }} />
+
+        <IngredientsList
+          className={styles.list}
+          ingredients={ingredients}
+          onClickOnItem={removeIngredient}
+        />
       </div>
     </>
   )
