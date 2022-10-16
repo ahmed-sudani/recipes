@@ -1,5 +1,6 @@
 import { getCsrfToken } from 'next-auth/react'
 import { Button, Head } from '../../../common/components'
+import { WithLabel } from '../../../common/hoc/withLabel'
 import styles from './styles.module.css'
 export default function Signin({ csrfToken }) {
   return (
@@ -13,12 +14,13 @@ export default function Signin({ csrfToken }) {
         action="/api/auth/signin/email"
         method="POST"
       >
-        <div className={styles.Text}>
+        <div className={styles.text}>
           Login To Start Add and Save Your Favorites Recipes
         </div>
-        <div className={styles.inputForm}>
-          <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
-          <label> Email </label>
+
+        <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
+
+        <WithLabel label="Email">
           <input
             required
             type="email"
@@ -26,7 +28,7 @@ export default function Signin({ csrfToken }) {
             id="email"
             className={styles.input}
           />
-        </div>
+        </WithLabel>
         <Button name="Send Link" />
       </form>
     </>

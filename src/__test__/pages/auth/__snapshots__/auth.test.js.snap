@@ -8,20 +8,22 @@ exports[`Auth signIn should render correctly 1`] = `
     method="POST"
   >
     <div
-      class="Text"
+      class="text"
     >
       Login To Start Add and Save Your Favorites Recipes
     </div>
+    <input
+      name="csrfToken"
+      type="hidden"
+      value=""
+    />
     <div
-      class="inputForm"
+      class="container"
     >
-      <input
-        name="csrfToken"
-        type="hidden"
-        value=""
-      />
       <label>
-         Email 
+         
+        Email
+         
       </label>
       <input
         class="input"

@@ -1,5 +1,2 @@
-export * from './InputWithIcon'
-export * from './InputWithLabel'
-export * from './ingredientsInput'
+export * from './inputWithIcon'
 export * from './countrySelector'
-export * from './formIngredients'

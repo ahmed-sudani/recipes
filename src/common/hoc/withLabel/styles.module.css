@@ -1,11 +1,11 @@
-.inputForm {
+.container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.input {
+/* .input {
   background-color: #d9d9d9;
   padding: 8px 10px;
   border-radius: 5px;
   border: none;
-}
+} */

@@ -1,4 +1,4 @@
-import { FavIcon } from '../../../favIcon'
+import { FavIcon } from '../../../Icons'
 import styles from './styles.module.css'
 
 export function RecipeCarHeader({ name, country, isFavorite, rid }) {
