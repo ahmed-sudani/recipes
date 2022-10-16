@@ -28,7 +28,7 @@ exports[`New page should render correctly 1`] = `
         Add new recipe to the site
       </div>
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
            
@@ -36,13 +36,11 @@ exports[`New page should render correctly 1`] = `
            
         </label>
         <input
-          class="input"
-          innerref="[object Object]"
           name="Name"
         />
       </div>
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
            
@@ -50,18 +48,19 @@ exports[`New page should render correctly 1`] = `
            
         </label>
         <input
-          class="input"
           name="Image Url"
         />
       </div>
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
+           
           Country
+           
         </label>
         <div
-          class="input css-b62m3t-container"
+          class="container css-b62m3t-container"
         >
           <span
             class="css-1f43avz-a11yText-A11yText"
@@ -141,7 +140,7 @@ exports[`New page should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
            
@@ -149,43 +148,40 @@ exports[`New page should render correctly 1`] = `
            
         </label>
         <input
-          class="input"
-          innerref="[object Object]"
           name="Required Time"
           type="number"
         />
       </div>
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
+           
           Ingredients
+           
         </label>
         <div
           class="ingredientsInput"
         >
           <input
+            icon="PlusSquare"
+            innerref="[object Object]"
             name="Ingredient"
-            type="text"
           />
-          <button
-            type="button"
+          <svg
+            fill="currentColor"
+            height="20"
+            viewBox="0 0 16 16"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              fill="currentColor"
-              height="20"
-              viewBox="0 0 16 16"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-              />
-              <path
-                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
-              />
-            </svg>
-          </button>
+            <path
+              d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+            />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+            />
+          </svg>
         </div>
       </div>
       <button

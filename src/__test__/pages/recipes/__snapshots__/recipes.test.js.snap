@@ -9,7 +9,7 @@ exports[`Recipes should render correctly 1`] = `
       class="filter"
     >
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
            
@@ -17,22 +17,21 @@ exports[`Recipes should render correctly 1`] = `
            
         </label>
         <input
-          class="input"
           innerref="[object Object]"
-          maxlength="50"
-          minlength="5"
           name="Query"
         />
       </div>
       <hr />
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
+           
           Country
+           
         </label>
         <div
-          class="input css-b62m3t-container"
+          class="container css-b62m3t-container"
         >
           <span
             class="css-1f43avz-a11yText-A11yText"
@@ -113,7 +112,7 @@ exports[`Recipes should render correctly 1`] = `
       </div>
       <hr />
       <div
-        class="inputForm"
+        class="container"
       >
         <label>
            
@@ -121,10 +120,7 @@ exports[`Recipes should render correctly 1`] = `
            
         </label>
         <input
-          class="input"
           innerref="[object Object]"
-          max="180"
-          min="1"
           name="Required Time"
           type="number"
         />
