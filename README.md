@@ -15,7 +15,7 @@
 
 ### 🏠 [Homepage](https://github.com/ahmed-sudani/recipes)
 
-### ✨ [Demo](https://recipes-n14royrsj-ahmed-sudani.vercel.app/)
+### ✨ [Demo](https://recipes-fe86pmh5r-ahmed-sudani.vercel.app/home)
 
 ## Prerequisites
 
