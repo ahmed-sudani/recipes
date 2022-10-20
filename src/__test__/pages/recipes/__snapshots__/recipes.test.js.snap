@@ -17,7 +17,6 @@ exports[`Recipes should render correctly 1`] = `
            
         </label>
         <input
-          innerref="[object Object]"
           name="Query"
         />
       </div>
@@ -120,7 +119,6 @@ exports[`Recipes should render correctly 1`] = `
            
         </label>
         <input
-          innerref="[object Object]"
           name="Required Time"
           type="number"
         />
