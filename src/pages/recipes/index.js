@@ -40,7 +40,7 @@ export default function Recipes({ recipes }) {
           <hr />
 
           <WithLabel label="Country">
-            <CountrySelector ref={countryInputRef} />
+            <CountrySelector innerref={countryInputRef} />
           </WithLabel>
 
           <hr />
