@@ -34,19 +34,19 @@ export default function Recipes({ recipes }) {
       <div className={styles.container}>
         <div className={styles.filter}>
           <WithLabel label="Query">
-            <input innerref={nameInputRef} name="Query" />
+            <input ref={nameInputRef} name="Query" />
           </WithLabel>
 
           <hr />
 
           <WithLabel label="Country">
-            <CountrySelector innerref={countryInputRef} />
+            <CountrySelector ref={countryInputRef} />
           </WithLabel>
 
           <hr />
 
           <WithLabel label="Required Time">
-            <input innerref={timeInputRef} name="Required Time" type="number" />
+            <input ref={timeInputRef} name="Required Time" type="number" />
           </WithLabel>
 
           <Button name="Search" onClick={onSubmitSearch} />
