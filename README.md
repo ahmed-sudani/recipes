@@ -48,5 +48,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Ahmed abdalla , Mousab Kamel](https://github.com/ahmed-sudani).<br />
+Copyright © 2022 [Ahmed abdalla](https://github.com/ahmed-sudani) [Mousab Kamel](https://github.com/MusabKamel).<br />
 This project is [MIT](https://github.com/ahmed-sudani/recipes/blob/main/LICENSE) licensed.
