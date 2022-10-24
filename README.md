@@ -13,15 +13,6 @@
 
 > A recipes web site that will help you to save you best recipes and access the others recipes
 
-### 🏠 [Homepage](https://github.com/ahmed-sudani/recipes)
-
-### ✨ [Demo](https://recipes-fe86pmh5r-ahmed-sudani.vercel.app/home)
-
-## Prerequisites
-
-- npm >=5.5.0
-- node >=9.3.0
-
 ## Install
 
 ```sh
@@ -48,5 +39,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Ahmed abdalla , Mousab Kamel](https://github.com/ahmed-sudani).<br />
+Copyright © 2022 [Ahmed abdalla](https://github.com/ahmed-sudani) [Mousab Kamel](https://github.com/MusabKamel).<br />
 This project is [MIT](https://github.com/ahmed-sudani/recipes/blob/main/LICENSE) licensed.
