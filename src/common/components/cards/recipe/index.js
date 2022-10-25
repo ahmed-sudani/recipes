@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 export function Recipe(props) {
   const router = useRouter()
   return (
-    <div className={styles.card} data-testid="card">
+    <div className={styles.card} data-testid="recipe">
       <ImageWithTime
         width={300}
         height={150}
