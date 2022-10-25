@@ -7,7 +7,7 @@ export default function favorites({ recipes }) {
     <>
       <Head title="Favorites" description="Save your favorites recipes" />
       <div className={styles.container}>
-        <RecipesList cards={recipes || []} />
+        <RecipesList recipes={recipes || []} />
       </div>
     </>
   )

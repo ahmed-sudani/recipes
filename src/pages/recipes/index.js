@@ -52,7 +52,7 @@ export default function Recipes({ recipes }) {
           <Button name="Search" onClick={onSubmitSearch} />
         </div>
 
-        <RecipesList cards={recipes || []} />
+        <RecipesList recipes={recipes || []} />
       </div>
     </>
   )
