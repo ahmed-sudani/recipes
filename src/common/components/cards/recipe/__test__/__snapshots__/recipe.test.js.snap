@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should render card component 1`] = `
+exports[`Recipe should render recipe component 1`] = `
 <div
   class="card"
-  data-testid="card"
+  data-testid="recipe"
 >
   <div
     class="image"
