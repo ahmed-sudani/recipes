@@ -10,8 +10,8 @@
 }
 .image {
   overflow: hidden;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 .item {
@@ -19,6 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   gap: 20px;
 }
 .ingredients {
